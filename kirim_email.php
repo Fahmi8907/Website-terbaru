@@ -1,24 +1,41 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/autoload.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = strip_tags($_POST['name']); // Sanitasi input
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL); // Validasi dan sanitasi email
-    $subject = strip_tags($_POST['subject']); // Sanitasi input
-    $message = strip_tags($_POST['message']); // Sanitasi input
+    $name = strip_tags($_POST['name']);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $subject = strip_tags($_POST['subject']);
+    $message = strip_tags($_POST['message']);
 
-    $to = "muhammad.fahmi42840@smp.belajar.id"; // Ganti dengan email Anda
-    $email_subject = "Pesan dari Formulir Kontak: " . $subject;
-    $email_body = "Nama: " . $name . "\nEmail: " . $email . "\nSubjek: " . $subject . "\nPesan:\n" . $message;
-    $headers = "From: " . $email . "\r\n";
-    $headers .= "Reply-To: " . $email . "\r\n";
+    $mail = new PHPMailer(true);
+    try {
+        // Konfigurasi SMTP Gmail
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'emailkamu@gmail.com'; // Ganti dengan email kamu
+        $mail->Password = 'passwordaplikasi'; // Gunakan Password Aplikasi Gmail
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
 
-    if (mail($to, $email_subject, $email_body, $headers)) {
-        echo "Pesan berhasil terkirim!"; // Tampilkan pesan sukses
-    } else {
-        echo "Terjadi kesalahan saat mengirim pesan."; // Tampilkan pesan kesalahan
+        // Pengirim & Penerima
+        $mail->setFrom($email, $name);
+        $mail->addAddress('muhammad.fahmi42840@smp.belajar.id'); // Email tujuan
+
+        // Konten Email
+        $mail->Subject = "Pesan dari Formulir Kontak: " . $subject;
+        $mail->Body = "Nama: $name\nEmail: $email\nSubjek: $subject\nPesan:\n$message";
+
+        // Kirim Email
+        $mail->send();
+        echo "Pesan berhasil terkirim!";
+    } catch (Exception $e) {
+        echo "Terjadi kesalahan: {$mail->ErrorInfo}";
     }
 } else {
-    echo "Akses tidak valid."; // Jika bukan metode POST
+    echo "Akses tidak valid.";
 }
-
 ?>
