@@ -367,52 +367,63 @@ You can customize everything to match your vision.</p>
                 </div>
             </div>
           </div>
-          <div class="slide" id="5">
-            <div class="content fifth-content">
-                <div class="container-fluid">
-                    <div class="col-md-6">
-                        <div id="map">
-                    </div>
-                    <div class="col-md-6">
-                        <form id="contact" action="" method="post">
-                            <div class="row">
-                                <div class="col-md-12">
-                                  <fieldset>
-                                    <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
-                                  </fieldset>
-                                </div>
-                                <div class="col-md-12">
-                                  <fieldset>
-                                    <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
-                                  </fieldset>
-                                </div>
-                                 <div class="col-md-12">
-                                  <fieldset>
-                                    <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..." required="">
-                                  </fieldset>
-                                </div>
-                                <div class="col-md-12">
-                                  <fieldset>
-                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
-                                  </fieldset>
-                                </div>
-                                <div class="col-md-12">
-                                  <fieldset>
-                                    <button type="submit" id="form-submit" class="btn">Send Now</button>
-                                    <script>
-document.getElementById("contactForm").addEventListener("submit", async (event) => {
-    event.preventDefault();
+<div class="slide" id="5">
+  <div class="content fifth-content">
+    <div class="container-fluid">
+      <div class="col-md-6">
+        <div id="map"></div>
+      </div>
+      <div class="col-md-6">
+        <form id="contact" action="" method="post">
+          <div class="row">
+            <div class="col-md-12">
+              <fieldset>
+                <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+              </fieldset>
+            </div>
+            <div class="col-md-12">
+              <fieldset>
+                <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
+              </fieldset>
+            </div>
+            <div class="col-md-12">
+              <fieldset>
+                <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..." required="">
+              </fieldset>
+            </div>
+            <div class="col-md-12">
+              <fieldset>
+                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+              </fieldset>
+            </div>
+            <div class="col-md-12">
+              <fieldset>
+                <button type="submit" id="form-submit" class="btn">Send Now</button>
+              </fieldset>
+            </div>
+          </div>
+        </form>
 
-    const formData = new FormData(event.target);
-    const response = await fetch("http://192.168.1.100:8080/send_email.php", { // Ganti dengan IP Termux
-        method: "POST",
-        body: formData
-    });
+        <!-- Script harus di luar form -->
+        <script>
+          document.getElementById("contact").addEventListener("submit", async (event) => {
+            event.preventDefault();
 
-    const result = await response.text();
-    alert(result);
-});
-</script>
+            const formData = new FormData(event.target);
+            const response = await fetch("http://192.168.1.100:8080/send_email.php", { // Ganti dengan IP Termux
+              method: "POST",
+              body: formData
+            });
+
+            const result = await response.text();
+            alert(result);
+          });
+        </script>
+
+      </div>
+    </div>
+  </div>
+</div>
                                   </fieldset>
                                 </div>
                             </div>
