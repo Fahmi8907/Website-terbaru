@@ -3511,3 +3511,13 @@ if (typeof Object.create !== "function") {
     };
 }(jQuery, window, document));
 
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBkfdICyVH2j-TekC9QOhYddymtUhPZjC4",
+  authDomain: "fahmzy-a.firebaseapp.com",
+  projectId: "fahmzy-a",
+  storageBucket: "fahmzy-a.firebasestorage.app",
+  messagingSenderId: "116869325896",
+  appId: "1:116869325896:web:538e28b8a0cd105634e47d",
+  measurementId: "G-ZTGY00C2ZG"
+};
