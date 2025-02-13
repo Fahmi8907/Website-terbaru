@@ -1,9 +1,4 @@
-/*!
- *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
- *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
- */
-/* FONT PATH
- * -------------------------- */
+
 @font-face {
   font-family: 'FontAwesome';
   src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
@@ -2334,4 +2329,47 @@
   margin: 0;
   overflow: visible;
   clip: auto;
+}
+.music-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 350px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.music-section:hover {
+    transform: translateX(10px);
+}
+
+.song-info {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.song-info h3, .song-info p {
+    margin: 0;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+}
+
+
+/* Custom tombol Play/Pause */
+.play-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.play-button:hover {
+    background-color: #666;
 }
