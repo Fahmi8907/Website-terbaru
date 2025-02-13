@@ -17,6 +17,8 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
     </head>
 
 <body>
@@ -410,11 +412,12 @@ You can customize everything to match your vision.</p>
               </fieldset>
             </div>
           </div>
-        
+        </form>
       </div>
     </div>
   </div>
 </div>
+<script src="auth.js"></script>
                                   </fieldset>
                                 </div>
                             </div>
@@ -534,6 +537,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 </script>
+
 </body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5K48CFGT"
