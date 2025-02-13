@@ -404,7 +404,7 @@ document.getElementById("contactForm").addEventListener("submit", async (event) 
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    const response = await fetch("http://0.0.0.0.:8080/send_email.php", { // Ganti dengan IP Termux
+    const response = await fetch("http://192.168.1.100:8080/send_email.php", { // Ganti dengan IP Termux
         method: "POST",
         body: formData
     });
