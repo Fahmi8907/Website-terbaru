@@ -36,4 +36,4 @@ document.getElementById("contact").addEventListener("submit", function(event) {
     }).catch((error) => {
         console.error("Gagal mengirim pesan:", error);
     });
-});
+});{
