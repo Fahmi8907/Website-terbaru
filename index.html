@@ -404,21 +404,7 @@ You can customize everything to match your vision.</p>
           </div>
         </form>
 
-        <!-- Script harus di luar form -->
-        <script>
-          document.getElementById("contact").addEventListener("submit", async (event) => {
-            event.preventDefault();
 
-            const formData = new FormData(event.target);
-            const response = await fetch("http://192.168.1.100:8080/send_email.php", { // Ganti dengan IP Termux
-              method: "POST",
-              body: formData
-            });
-
-            const result = await response.text();
-            alert(result);
-          });
-        </script>
 <form action="https://randomid.ngrok.io/send_email.php" method="post">
       </div>
     </div>
@@ -488,5 +474,22 @@ You can customize everything to match your vision.</p>
         };
     }
     </script>
+            <!-- Script harus di luar form -->
+
+        <script>
+
+          document.getElementById("contact").addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const response = await fetch("http://192.168.1.100:8080/send_email.php", { // Ganti dengan IP Termux
+              method: "POST",
+              body: formData
+            });
+
+            const result = await response.text();
+            alert(result);
+          });
+        </script>
 </body>
 </html>
