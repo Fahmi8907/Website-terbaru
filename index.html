@@ -399,6 +399,20 @@ You can customize everything to match your vision.</p>
                                 <div class="col-md-12">
                                   <fieldset>
                                     <button type="submit" id="form-submit" class="btn">Send Now</button>
+                                    <script>
+document.getElementById("contactForm").addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const response = await fetch("http://0.0.0.0.:8080/send_email.php", { // Ganti dengan IP Termux
+        method: "POST",
+        body: formData
+    });
+
+    const result = await response.text();
+    alert(result);
+});
+</script>
                                   </fieldset>
                                 </div>
                             </div>
