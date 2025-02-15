@@ -36,4 +36,12 @@ document.getElementById("contact").addEventListener("submit", function(event) {
     }).catch((error) => {
         console.error("Gagal mengirim pesan:", error);
     });
-    
+    const socket = io();
+
+socket.on("play-audio", () => {
+    document.getElementById("music").play();
+});
+
+socket.on("pause-audio", () => {
+    document.getElementById("music").pause();
+});
