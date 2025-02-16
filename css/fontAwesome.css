@@ -2334,7 +2334,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #303030;
+    background-color: #000000;
     color: white;
     padding: 10px 15px;
     border-radius: 8px;
@@ -2354,20 +2354,20 @@
 
 .song-info h3, .song-info p {
     margin: 0;
-    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+    text-shadow: 5px 0px 5px rgba(85, 77, 77, 0.57);
 }
 
 
 
 .play-button {
     background-color: #242020;
-    color: white;
+    color: #3C3B3B;
     border: none;
     padding: 5px 5px;
     border-radius: 10%;
     cursor: pointer;
     font-size: 18px;
-    transition: background 0.2s;
+    transition: background 0.5s;
 }
 
 .play-button:hover {
@@ -2377,5 +2377,5 @@
 .somebody{
   width:100px;
   height: auto;
-  border-radius:30px;
+  border-radius:20px;
 }
