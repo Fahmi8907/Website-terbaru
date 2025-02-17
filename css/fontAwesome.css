@@ -2379,3 +2379,13 @@
   height: auto;
   border-radius:20px;
 }
+.adsbygoogle {
+    background-color: #f0f0f0; /* Warna abu-abu muda sebelum iklan muncul */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #888; /* Warna teks sementara */
+    font-size: 14px;
+    min-height: 100px; /* Pastikan iklan punya tinggi agar tidak collapse */
+}
