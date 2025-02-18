@@ -2385,7 +2385,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #888; /* Warna teks sementara */
+    color: #888; 
     font-size: 14px;
-    min-height: 100px; /* Pastikan iklan punya tinggi agar tidak collapse */
+    min-height: 100px; 
 }
