@@ -2388,4 +2388,23 @@
     color: #888; 
     font-size: 14px;
     min-height: 100px; 
-}
+}     
+.text-3d {
+            font-size: 50px;
+            font-weight: bold;
+            color: #333;
+            text-transform: uppercase;
+            transform-style: preserve-3d;
+            transform: perspective(500px) rotateX(20deg);
+            text-shadow: 
+                1px 1px 0 #ccc, 
+                2px 2px 0 #bbb, 
+                3px 3px 0 #aaa, 
+                4px 4px 0 #999, 
+                5px 5px 0 #888, 
+                6px 6px 0 #777, 
+                7px 7px 0 #666, 
+                8px 8px 0 #555, 
+                9px 9px 0 #444, 
+                10px 10px 0 #333;
+        }
