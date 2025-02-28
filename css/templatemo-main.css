@@ -17,7 +17,7 @@ https://templatemo.com/tm-512-moonlight
 }
 
 .seq-preloader {
-  background: white;
+  background:#3F3F3F;
   visibility: visible;
   opacity: 1;
   position: absolute;
@@ -48,7 +48,7 @@ https://templatemo.com/tm-512-moonlight
   display: inline-block;
   height: 12px;
   width: 12px;
-  fill: #7a7a7a;
+  fill: #000000;
   opacity: 0;
   animation: seq-preloader 1.25s infinite;
 }
