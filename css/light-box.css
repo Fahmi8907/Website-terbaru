@@ -1,5 +1,4 @@
 /* LIGHT BOX */
-
 body:after {
   content: url(../img/close.png) url(../img/loading.gif) url(../img/prev.png) url(../img/next.png);
   display: none;
@@ -54,9 +53,7 @@ body.lb-disable-scrolling {
   margin: 0 auto;
   border-radius: 4px;
 
-  /* Background color behind image.
-     This is visible during transitions. */
-  background-color: #606063;
+  background-color: #6A6A6A;
 }
 
 .lb-outerContainer:after {
