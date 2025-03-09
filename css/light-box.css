@@ -211,3 +211,16 @@ body.lb-disable-scrolling {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
+.nglfam{
+  background: #0000008A;
+  color: #FFFFFF;
+  text-transform: ft-radius;
+  weight:300px;
+}
+.puisi{
+    background: linear-gradient(45deg, #5F5F5F, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    font-weight: bold;
+  }
