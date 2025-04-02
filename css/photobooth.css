@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.camera {
+  position: relative;
+}
+
+#video {
+  border: 50px solid #000000;
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.controls {
+  margin-top: 5px;
+}
+
+.filters {
+  margin-top: 10px;
+}
+
+.filter {
+  margin: 5px;
+}
