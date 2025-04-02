@@ -63,4 +63,34 @@ function createTags(input) {
     choiceContainer.appendChild(div)
   })
 
+document.getElementById("hitungBtn").addEventListener("click", function () {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let operator = document.getElementById("operator").value;
+            let hasilElement = document.getElementById("hasil");
+
+            if (isNaN(num1) || isNaN(num2)) {
+                hasilElement.textContent = "Masukkan angka yang valid!";
+                return;
+            }
+
+            let hasil;
+            switch (operator) {
+                case "+":
+                    hasil = num1 + num2;
+                    break;
+                case "-":
+                    hasil = num1 - num2;
+                    break;
+                case "*":
+                    hasil = num1 * num2;
+                    break;
+                case "/":
+                    hasil = num2 !== 0 ? num1 / num2 : "Tidak bisa bagi 0!";
+                    break;
+                default:
+                    hasil = "Operator tidak valid!";
+            }
+            hasilElement.textContent = hasil;
+        });
 }

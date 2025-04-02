@@ -396,28 +396,20 @@ You can customize everything to match your vision.</p>
     <button type="submit" style="color: white">Kirim</button>
 </form>
 <div class="calculator">
-    <h2>Kalkulator</h2>
+ <h2>Kalkulator</h2>
     <input type="number" id="num1" placeholder="Masukkan angka pertama">
     <input type="number" id="num2" placeholder="Masukkan angka kedua">
     <select id="operator">
         <option value="+">(+)</option>
         <option value="-">(-)</option>
         <option value="*">(×)</option>
-        <option value="/">(÷)</option>
+        <option value="/">(&#247;)</option>
     </select>
-    <button onclick="hitung()">Hitung</button>
+    <button id="hitungBtn">Hitung</button>
     <h3>Hasil: <span id="hasil">0</span></h3>
-</div>
+    </div>
 
-  <div class="container">
-    <h2 style="color: red">Random Choice maker</h2>
-    <div class="tabContainer">
-      <textarea id=textarea placeholder="zombie,manusia......"></textarea>
-      <div id="btn">Generate</div>
-    </div>
-    <div id="choiceContainer">
-      <!-- <div class="tags">One</div> -->
-    </div>
+
             </div>
           </div>
         </form>
@@ -442,46 +434,22 @@ h2>Photobooth dengan 3 Gambar dan Fitur Edit</h2>
     <button id="capture">Ambil Foto</button>
     <br>
 
-    <!-- Foto Utama dan Dua Foto dengan Efek -->
-    <div class="photo-container">
-        <canvas id="canvasMain" width="300" height="225"></canvas>
-        <canvas id="canvasEffect1" width="300" height="225"></canvas>
-        <canvas id="canvasEffect2" width="300" height="225"></canvas>
-    </div>
-
-    <br>
-
-    <div class="edit-container">
-        <!-- Pilihan Timer -->
-        <div>
-            <label for="timer">Timer (detik):</label>
-            <input type="number" id="timer" value="5" min="1" max="40">
-        </div>
-        <!-- Pilihan Warna Frame -->
-        <div>
-            <label for="frameColor">Warna Frame:</label>
-            <input type="color" id="frameColor" value="#000000" class="color-picker">
-        </div>
-        <!-- Pilihan Warna Background -->
-        <div>
-            <label for="bgColor">Warna Background:</label>
-            <input type="color" id="bgColor" value="#ffffff" class="color-picker">
-        </div>
-        <!-- Pilihan Stiker -->
-        <div>
-            <label for="stickerUpload">Upload Stiker:</label>
-            <input type="file" id="stickerUpload" accept="image/*">
-        </div>
-        <!-- Pilihan Background PNG -->
-        <div>
-            <label for="bgUpload">Upload PNG Background:</label>
-            <input type="file" id="bgUpload" accept="image/png">
         </div>
     </div>
     <br>
     <button id="deletePhoto">Hapus Foto</button>
     <button id="download">Download Foto</button>
+  <div class="container">
 
+    <h2 style="color: red">Random Choice maker</h2>
+
+    <div class="tabContainer">
+      <textarea id=textarea placeholder="zombie,manusia......"></textarea>
+      <div id="btn">Generate</div>
+    </div>
+    <div id="choiceContainer">
+      <!-- <div class="tags">One</div> -->
+    </div>
 
 
                                   </fieldset>
@@ -501,7 +469,7 @@ h2>Photobooth dengan 3 Gambar dan Fitur Edit</h2>
               <>
           </div>
         </div>
-        <script src="js/photobooth.js"></script>
+        
         <script src="js/test.js"></script>
 <amp-auto-ads type="adsense"
         data-ad-client="ca-pub-6527535838311714">
@@ -587,7 +555,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   gtag('config', 'G-V95NY9R2LF');
 </script>
-<script src="belajar.js"></script>
+
 
 </body>
 </html>
