@@ -23,7 +23,7 @@ Kami hanya menjamin perbaikan keamanan untuk versi berikut:
 Jika Anda menemukan celah keamanan:
 
 1. **Jangan** membuka _issue_ publik.
-2. Kirim laporan detail ke: **security@fahmzy.dev**  
+2. Kirim laporan detail ke: **fahmiakbar097@gmail.com**  
    Sertakan:
    - Langkah untuk mereproduksi masalah
    - Dampak potensial
