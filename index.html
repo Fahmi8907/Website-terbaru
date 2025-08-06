@@ -24,7 +24,7 @@
      crossorigin="anonymous"></script>
 <script async custom-element="amp-auto-ads"
         src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-<s</script>
+</script>
 <body>
     <div class="sequence">
       <div class="seq-preloader">
@@ -32,25 +32,24 @@
       </div>
       
     </div>
-    
-<div class="sidebar">
-        <nav>
-          <div class="logo">
-              <img src="img/Fahmzy.png" alt="">
-          </div>
-          <div class="mini-logo">
-              <img src="img/mini-fahmzy.png" alt="">
-          </div>
-          <ul>
-            <li><a href="#1"><i class="fa fa-home"></i> <em>Home</em></a></li>
-            <li><a href="#2"><i class="fa fa-user"></i> <em>ABOUT</em></a></li>
-            <li><a href="#3"><i class="fa fa-pencil"></i> <em>BENEFIT</em></a></li>
-            <li><a href="#4"><i class="fa fa-image"></i> <em>Artwork</em></a></li>
-            <li><a href="#5"><i class="fa fa-envelope"></i> <em>Contact</em></a></li>
-            <li><a href="#6"><i class="fa fa-book"></i> <em>informasi </em></a>
-          </ul>
-        </nav>
-        
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+  <nav>
+    <div class="logo">
+      <img src="img/Fahmzy.png" alt="Logo Besar">
+    </div>
+    <div class="mini-logo">
+      <img src="img/mini-fahmzy.png" alt="Logo Mini">
+    </div>
+    <ul>
+      <li><a href="#1"><i class="fa fa-home"></i> <em>Home</em></a></li>
+      <li><a href="#2"><i class="fa fa-user"></i> <em>ABOUT</em></a></li>
+      <li><a href="#3"><i class="fa fa-pencil"></i> <em>BENEFIT</em></a></li>
+      <li><a href="#4"><i class="fa fa-image"></i> <em>Artwork</em></a></li>
+      <li><a href="#5"><i class="fa fa-envelope"></i> <em>Contact</em></a></li>
+    </ul>
+  </nav>
+</div>
         <div class="slides">
           <div class="slide" id="1">
             <div class="content first-content">
@@ -78,7 +77,7 @@ Mau lihat karya? Silakan jelajah,
 Dari portofolio hingga inspirasi.
 Butuh layanan? Langsung hubungi,
 Kami siap membantu dengan sepenuh hati!
-</br><br>
+</br><br> 
 Fahmzy bukan sekadar nama,
 Tapi tempat ide bertransformasi.
 Jelajahi, nikmati, dan rasakan,
@@ -408,68 +407,14 @@ You can customize everything to match your vision.</p>
     <button id="hitungBtn">Hitung</button>
     <h3>Hasil: <span id="hasil">0</span></h3>
     </div>
-
-
+    </div>
             </div>
           </div>
         </form>
       </div>
     </div>
   </div>
-  </div>
-  
-<div class="slide" id="6">
- <div class="count">
- <div class="content first-content">
- <div class="container-fluid">
-
-</tag>
-                   <div class="col-md-12">
-              <fieldset>
-                       <div class="container">
-h2>Photobooth dengan 3 Gambar dan Fitur Edit</h2>
-
-    <video id="video" width="600" height="300" autoplay></video>
-    <br>
-    <button id="capture">Ambil Foto</button>
-    <br>
-
-        </div>
-    </div>
-    <br>
-    <button id="deletePhoto">Hapus Foto</button>
-    <button id="download">Download Foto</button>
-  <div class="container">
-
-    <h2 style="color: red">Random Choice maker</h2>
-
-    <div class="tabContainer">
-      <textarea id=textarea placeholder="zombie,manusia......"></textarea>
-      <div id="btn">Generate</div>
-    </div>
-    <div id="choiceContainer">
-      <!-- <div class="tags">One</div> -->
-    </div>
-
-
-                                  </fieldset>
-                           </div>
-                      </div>
-                   </div>
-                </div>
-            </div>
-          </div>
-        </div>
-        </div>
-        </div>
-
-        <div class="footer">
-          <div class="content">
-              <p> 2025 Company Name:fahmzy</a></p>
-              <>
-          </div>
-        </div>
-        
+  </div
         <script src="js/test.js"></script>
 <amp-auto-ads type="adsense"
         data-ad-client="ca-pub-6527535838311714">
@@ -544,18 +489,19 @@ h2>Photobooth dengan 3 Gambar dan Fitur Edit</h2>
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5K48CFGT');</script>
+})(window,document,'script','dataLayer','GTM-5K48CFGT');
 <!-- End Google Tag Manager -->
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V95NY9R2LF"></script>
-<script>
+ async src="https://www.googletagmanager.com/gtag/js?id=G-V95NY9R2LF">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-V95NY9R2LF');
-</script>
+  gtag('config', 'G-V95NY9R2LF'); const toggleBtn = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
 
-
+  toggleBtn.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });</script>
 </body>
 </html>
