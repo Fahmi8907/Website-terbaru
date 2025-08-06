@@ -5,91 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shop - Fahmi Akbar</title>
   <link rel="stylesheet" href="shopjs/shop.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
 
 <header class="site-header">
   <nav class="container nav">
     <a href="index.html" class="logo">Fahmi Akbar</a>
-    <!-- Tombol hamburger untuk mobile -->
-    <button class="nav-toggle" aria-label="Toggle navigation">
-      &#9776;
-    </button>
-
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
     <ul class="nav-list">
       <li><a href="index.html">Beranda</a></li>
       <li><a href="informasi.html">Informasi</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="contact.html">Kontak</a></li>
+      <li><a href="">Kontak</a></li>
     </ul>
   </nav>
 </header>
-  <main class="container">
-    <section class="shop-hero">
-      <h1>produk bisnis terbaru</h1>
-      <p>Pilih produk  yang anda inginkan</p>
-    </section>
 
-    <section class="product-list">
-      <article class="product-item">
-        <img src="assets/img/product1.jpg" alt="Desain Logo" />
-        <h2>Desain Logo Profesional</h2>
-        <p>Desain logo yang unik dan menarik untuk bisnis Anda.</p>
-        <p class="price">Rp 500.000</p>
-        <a href="#" class="btn-primary">Beli Sekarang</a>
-      </article>
+<main class="container">
+  <!-- Hero Section -->
+  <section class="shop-hero animate-fade">
+    <div class="shop-hero-content">
+      <h1>✨ Produk Bisnis Terbaru</h1>
+      <p>Pilih produk yang sesuai kebutuhanmu dan rasakan kualitas terbaiknya.</p>
 
-      <article class="product-item">
-        <img src="assets/img/product2.jpg" alt="Website Custom" />
-        <h2>Pembuatan Website Custom</h2>
-        <p>Website responsif dan SEO friendly sesuai kebutuhan.</p>
-        <p class="price">Rp 3.000.000</p>
-        <a href="#" class="btn-primary">Beli Sekarang</a>
-      </article>
+    </div>
+  </section>
 
-      <article class="product-item">
-        <img src="assets/img/product3.jpg" alt="Layanan IT Support" />
-        <h2>Layanan IT Support</h2>
-        <p>Support teknis cepat dan handal untuk bisnis Anda.</p>
-        <p class="price">Rp 1.000.000 / bulan</p>
-        <a href="#" class="btn-primary">Beli Sekarang</a>
-      </article>
-    </section>
-  </main>
+  <!-- Product List -->
+  <section id="produk" class="product-list">
+    <article class="product-item animate-fade">
+      <span class="badge">Baru</span>
+      <img src="assets/img/product1.jpg" alt="Desain Logo" />
+      <h2>Desain Logo Profesional</h2>
+      <p>Desain logo yang unik dan menarik untuk bisnis Anda.</p>
+      <div class="rating">
+        ★★★★☆
+      </div>
+      <p class="price">Rp 500.000</p>
+      <a href="#" class="btn-primary">Beli Sekarang</a>
+    </article>
 
-  <footer class="site-footer">
-    <p>© 2025 Fahmi Akbar. All rights reserved.</p>
-  </footer>
+    <article class="product-item animate-fade">
+      <span class="badge">Best Seller</span>
+      <img src="assets/img/product2.jpg" alt="Website Custom" />
+      <h2>Pembuatan Website Custom</h2>
+      <p>Website responsif dan SEO friendly sesuai kebutuhan.</p>
+      <div class="rating">
+        ★★★★★
+      </div>
+      <p class="price">Rp 3.000.000</p>
+      <a href="#" class="btn-primary">Beli Sekarang</a>
+    </article>
+
+    <article class="product-item animate-fade">
+      <span class="badge promo">Promo</span>
+      <img src="assets/img/product3.jpg" alt="Layanan IT Support" />
+      <h2>Layanan IT Support</h2>
+      <p>Support teknis cepat dan handal untuk bisnis Anda.</p>
+      <div class="rating">
+        ★★★★☆
+      </div>
+      <p class="price">Rp 1.000.000 / bulan</p>
+      <a href="#" class="btn-primary">Beli Sekarang</a>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© 2025 Fahmi Akbar. All rights reserved.</p>
+</footer>
+
 <script>
   // Popup konfirmasi beli
   document.querySelectorAll('.btn-primary').forEach(btn => {
     btn.addEventListener('click', e => {
-      e.preventDefault(); // cegah link default
+      e.preventDefault();
       const productName = e.target.closest('.product-item').querySelector('h2').innerText;
       if(confirm(`Apakah Anda yakin ingin membeli produk "${productName}"?`)) {
         alert(`Terima kasih sudah memilih produk "${productName}"! Kami akan menghubungi Anda segera.`);
-        // Di sini bisa tambah redirect ke checkout atau kontak
       }
     });
   });
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', e => {
-      const category = e.target.dataset.category; // contoh: data-category="desain"
-      document.querySelectorAll('.product-item').forEach(product => {
-        if(category === 'all' || product.classList.contains(category)) {
-          product.style.display = 'flex';
-        } else {
-          product.style.display = 'none';
-        }
-      });
-    });
-  });
-const navToggle = document.querySelector('.nav-toggle');
-  const navList = document.querySelector('.nav-list');
 
-  navToggle.addEventListener('click', () => {
-    navList.classList.toggle('open');
+  // Toggle navbar di mobile
+  document.querySelector('.nav-toggle').addEventListener('click', () => {
+    document.querySelector('.nav-list').classList.toggle('open');
   });
 </script>
+
 </body>
 </html>

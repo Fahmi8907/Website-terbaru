@@ -1,6 +1,4 @@
-/* ====== Shop Page Styling ====== */
-
-/* General */
+/* ===== General ===== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -17,7 +15,7 @@ a {
   text-decoration: none;
 }
 
-/* ====== Navbar ====== */
+/* ===== Navbar ===== */
 header {
   background: #0a74da;
   color: white;
@@ -64,75 +62,106 @@ header {
   cursor: pointer;
 }
 
-/* ====== Shop Hero ====== */
+/* ===== Hero Section ===== */
 .shop-hero {
-  position: relative;
-  background-image: url("https://raw.githubusercontent.com/Fahmi8907/Website-terbaru/main/img/Ramadhan.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #82E3FF, #c6f6ff);
+  padding: 4rem 2rem;
   text-align: center;
   margin: 2rem 0;
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* diperbaiki alpha */
-  color: white;
-  overflow: hidden; /* supaya overlay ikut bentuk border-radius */
-}
-
-/* Overlay transparan */
-.shop-hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,.4); /* warna hitam transparan */
-  border-radius: 15px;
-}
-
-/* Biar teks di atas overlay */
-.shop-hero h1,
-.shop-hero p {
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
   position: relative;
-  z-index: 2;
+  overflow: hidden;
 }
 
 .shop-hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #003344;
 }
 
 .shop-hero p {
-  color: #555;
   font-size: 1.1rem;
+  color: #004455;
+  max-width: 600px;
+  margin: 0 auto 2rem;
 }
 
-/* ====== Product List ====== */
-.product-list {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.shop-btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: #0077a6;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
+.shop-btn:hover {
+  background: #005c80;
+  transform: scale(1.05);
+}
+
+/* Efek Ornamen Bulat */
+.shop-hero::before,
+.shop-hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 0;
+}
+
+.shop-hero::before {
+  width: 200px;
+  height: 200px;
+  top: -50px;
+  left: -50px;
+}
+
+.shop-hero::after {
+  width: 150px;
+  height: 150px;
+  bottom: -40px;
+  right: -40px;
+}
+
+.shop-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Product Card ===== */
 .product-item {
-  background: #99ADFF;
+  background: linear-gradient(145deg, #99ADFF, #7e92f5);
   flex: 1 1 calc(33% - 1rem);
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,1.1);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   padding: 1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  animation: fadeInUp 0.8s forwards;
+  opacity: 0;
+}.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .product-item:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 16px rgba(0,0,0,1.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 .product-item img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-bottom: 1rem;
   object-fit: cover;
   max-height: 180px;
@@ -162,24 +191,46 @@ header {
   color: #0a74da;
 }
 
-/* ====== Button ====== */
+/* Badge Produk */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff9800;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.badge.promo { background: #e91e63; }
+
+/* Rating Bintang */
+.rating {
+  color: #ffcc00;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Button ===== */
 .btn-primary {
   align-self: center;
-  padding: 0.5rem 1.2rem;
-  background-color: #ff5722;
+  padding: 0.6rem 1.4rem;
+  background: linear-gradient(135deg, #ff5722, #ff784e);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #e64a19;
+  background: linear-gradient(135deg, #e64a19, #ff5722);
+  transform: scale(1.05);
 }
 
-/* ====== Footer ====== */
+/* ===== Footer ===== */
 .site-footer {
   text-align: center;
   padding: 1rem;
@@ -188,7 +239,12 @@ header {
   color: white;
 }
 
-/* ====== Responsive ====== */
+/* Animasi Fade In */
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .nav-list {
     display: none;
