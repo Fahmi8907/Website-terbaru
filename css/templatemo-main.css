@@ -780,7 +780,7 @@ nav a:hover::before {
 	}
 
 	nav ul li i {
-		width: 20px;
+		width: 10px;
 		height: 20px;
 		line-height: 20px;
 		text-align: center;
@@ -807,11 +807,11 @@ nav a:hover::before {
 
 
 	.fifth-content #map {
-		padding: 15px 15px 15px 15px;
+		padding: 10px 10px 10px 10px;
 	}
 
 	.fifth-content #contact {
-		padding: 15px 15px 15px 15px;
+		padding: 10px 10px 10px 10px;
 	}
 
 }
